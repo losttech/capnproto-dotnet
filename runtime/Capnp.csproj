@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Capnproto</RootNamespace>
+    <Description>Cap'n Proto binary format library</Description>
+    <PackageId>CapnProto</PackageId>
+    <Version>0.2.1.0</Version>
+    <Authors>Thomas Brix Larsen</Authors>
+    <Product>CapnProto-DotNet</Product>
+    <Copyright>Copyright Thomas Brix Larsen © 2017</Copyright>
+    <PackageProjectUrl>https://github.com/ThomasBrixLarsen/capnproto-dotnet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>serialization binary capnp</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+</Project>
