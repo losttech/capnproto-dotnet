@@ -24,7 +24,7 @@ namespace Capnproto
 	using System;
 	using System.Collections;
 	
-	public sealed class StructList
+	public static class StructList
 	{
 		public sealed class Factory<ElementBuilder, ElementReader> : Capnproto.ListFactory<Capnproto.StructList.Builder<ElementBuilder>,
 		                                                             Capnproto.StructList.Reader<ElementReader>>
@@ -38,27 +38,27 @@ namespace Capnproto
 				this.SingleFactory = factory;
 			}
 			
-			public sealed override Capnproto.StructList.Reader<ElementReader> ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+			public override Capnproto.StructList.Reader<ElementReader> ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 			{
 				return new Capnproto.StructList.Reader<ElementReader>(SingleFactory, segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 			}
 			
-			public sealed override Capnproto.StructList.Builder<ElementBuilder> constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+			public override Capnproto.StructList.Builder<ElementBuilder> constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 			{
 				return new Capnproto.StructList.Builder<ElementBuilder>(SingleFactory, segment, ptr, elementCount, step, structDataSize, structPointerCount);
 			}
 			
-			public sealed override Capnproto.StructList.Builder<ElementBuilder> fromPointerBuilderRefDefault(Capnproto.SegmentBuilder segment, int pointer, Capnproto.SegmentReader defaultSegment, int defaultOffset)
+			public override Capnproto.StructList.Builder<ElementBuilder> fromPointerBuilderRefDefault(Capnproto.SegmentBuilder segment, int pointer, Capnproto.SegmentReader defaultSegment, int defaultOffset)
 			{
 				return Capnproto.WireHelpers.getWritableStructListPointer(this, pointer, segment, SingleFactory.StructSize(), defaultSegment, defaultOffset);
 			}
 			
-			public sealed override Capnproto.StructList.Builder<ElementBuilder> fromPointerBuilder(Capnproto.SegmentBuilder segment, int pointer)
+			public override Capnproto.StructList.Builder<ElementBuilder> fromPointerBuilder(Capnproto.SegmentBuilder segment, int pointer)
 			{
 				return Capnproto.WireHelpers.getWritableStructListPointer(this, pointer, segment, SingleFactory.StructSize(), null, 0);
 			}
 			
-			public sealed override Capnproto.StructList.Builder<ElementBuilder> initFromPointerBuilder(Capnproto.SegmentBuilder segment, int pointer, int elementCount)
+			public override Capnproto.StructList.Builder<ElementBuilder> initFromPointerBuilder(Capnproto.SegmentBuilder segment, int pointer, int elementCount)
 			{
 				return Capnproto.WireHelpers.initStructListPointer(this, pointer, segment, elementCount, SingleFactory.StructSize());
 			}

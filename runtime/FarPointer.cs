@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	internal sealed class FarPointer
+	internal static class FarPointer
 	{
 		public static int getSegmentId(long @ref)
 		{

@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	public sealed class SerializePacked
+	public static class SerializePacked
 	{
 		/// <exception cref="System.IO.IOException"/>
 		public static Capnproto.MessageReader Read(Capnproto.BufferedInputStream input)

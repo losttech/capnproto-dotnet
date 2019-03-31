@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	internal sealed class WirePointer
+	internal static class WirePointer
 	{
 		public const byte STRUCT = 0;
 		

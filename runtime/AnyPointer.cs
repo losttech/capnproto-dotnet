@@ -21,9 +21,9 @@
 
 namespace Capnproto
 {
-	public sealed class AnyPointer
+	public static class AnyPointer
 	{
-		public sealed class Factory : Capnproto.PointerFactory<Capnproto.AnyPointer.Builder, Capnproto.AnyPointer.Reader>
+		public struct Factory : Capnproto.PointerFactory<Capnproto.AnyPointer.Builder, Capnproto.AnyPointer.Reader>
 		{
 			public Capnproto.AnyPointer.Reader fromPointerReader(Capnproto.SegmentReader segment, int pointer, int nestingLimit)
 			{
@@ -45,7 +45,7 @@ namespace Capnproto
 		
 		public static readonly Capnproto.AnyPointer.Factory SingleFactory = new Capnproto.AnyPointer.Factory();
 		
-		public sealed class Reader
+		public struct Reader
 		{
 			internal readonly Capnproto.SegmentReader segment;
 			
@@ -71,7 +71,7 @@ namespace Capnproto
 			}
 		}
 		
-		public sealed class Builder
+		public struct Builder
 		{
 			internal readonly Capnproto.SegmentBuilder segment;
 			

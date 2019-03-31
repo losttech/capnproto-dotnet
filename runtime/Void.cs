@@ -21,24 +21,9 @@
 
 namespace Capnproto
 {
-	[System.Serializable]
-	public sealed class Void : Sharpen.EnumBase
-	{
-		public static readonly Capnproto.Void VOID = new Capnproto.Void(0, "VOID");
-		
-		private Void(int ordinal, string name) : base(ordinal, name)
-		{
-			
-		}
-		
-		public static Void[] values()
-		{
-			return new Void[] { VOID };
-		}
-		
-		static Void()
-		{
-			RegisterValues<Void>(values());
-		}
-	}
+    [System.Serializable]
+    public enum Void
+    {
+        VOID,
+    }
 }

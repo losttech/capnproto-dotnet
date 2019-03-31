@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	public sealed class Text
+	public static class Text
 	{
 		public sealed class Factory : Capnproto.FromPointerReaderBlobDefault<Capnproto.Text.Reader>,
 		                              Capnproto.FromPointerBuilderBlobDefault<Capnproto.Text.Builder>,
@@ -115,7 +115,7 @@ namespace Capnproto
 				return result;
 			}
 			
-			public sealed override string ToString()
+			public override string ToString()
 			{
 				byte[] bytes = new byte[this.size];
 				java.nio.ByteBuffer dup = this.buffer.duplicate();
@@ -170,7 +170,7 @@ namespace Capnproto
 				return result;
 			}
 			
-			public sealed override string ToString()
+			public override string ToString()
 			{
 				byte[] bytes = new byte[this.size];
 				java.nio.ByteBuffer dup = this.buffer.duplicate();

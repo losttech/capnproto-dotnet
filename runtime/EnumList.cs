@@ -23,7 +23,7 @@ using System;
 
 namespace Capnproto
 {
-	public class EnumList
+	public static class EnumList
 	{
 		internal static T clampOrdinal<T>(T[] values, short ordinal)
 		{
@@ -42,12 +42,12 @@ namespace Capnproto
 				this.values = values;
 			}
 			
-			public sealed override Capnproto.EnumList.Reader<T> ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+			public override Capnproto.EnumList.Reader<T> ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 			{
 				return new Capnproto.EnumList.Reader<T>(values, segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 			}
 			
-			public sealed override Capnproto.EnumList.Builder<T> constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+			public override Capnproto.EnumList.Builder<T> constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 			{
 				return new Capnproto.EnumList.Builder<T>(values, segment, ptr, elementCount, step, structDataSize, structPointerCount);
 			}

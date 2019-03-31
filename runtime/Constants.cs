@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	internal sealed class Constants
+	internal static class Constants
 	{
 		public const int BITS_PER_BYTE = 8;
 		

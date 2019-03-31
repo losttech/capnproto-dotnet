@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	public sealed class GeneratedClassSupport
+	public static class GeneratedClassSupport
 	{
 		public static Capnproto.SegmentReader decodeRawBytes(string s)
 		{

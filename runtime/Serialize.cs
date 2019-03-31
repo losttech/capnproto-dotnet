@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	public sealed class Serialize
+	public static class Serialize
 	{
 		internal static java.nio.ByteBuffer makeByteBuffer(int bytes)
 		{

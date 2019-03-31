@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	internal sealed class StructPointer
+	internal static class StructPointer
 	{
 		public static short dataSize(long @ref)
 		{

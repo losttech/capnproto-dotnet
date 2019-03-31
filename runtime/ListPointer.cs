@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	internal sealed class ListPointer
+	internal static class ListPointer
 	{
 		public static byte elementSize(long @ref)
 		{

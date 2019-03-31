@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	public class PrimitiveList
+	public static class PrimitiveList
 	{
 		public class Void
 		{
@@ -32,12 +32,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Void.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Void.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Void.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Void.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Void.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Void.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -76,12 +76,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Boolean.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Boolean.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Boolean.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Boolean.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Boolean.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Boolean.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -140,12 +140,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Sbyte.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Sbyte.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Sbyte.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Sbyte.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Sbyte.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Sbyte.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -205,12 +205,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Byte.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Byte.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Byte.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Byte.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Byte.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Byte.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -270,12 +270,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Short.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Short.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Short.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Short.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Short.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Short.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -335,12 +335,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Ushort.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Ushort.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Ushort.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Ushort.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Ushort.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Ushort.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -400,12 +400,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Int.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Int.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Int.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Int.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Int.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Int.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -465,12 +465,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Uint.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Uint.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Uint.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Uint.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Uint.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Uint.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -530,12 +530,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Float.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Float.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Float.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Float.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Float.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Float.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -595,12 +595,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Long.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Long.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Long.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Long.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Long.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Long.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -660,12 +660,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Ulong.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Ulong.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Ulong.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Ulong.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Ulong.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Ulong.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}
@@ -725,12 +725,12 @@ namespace Capnproto
 					
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Double.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+				public override Capnproto.PrimitiveList.Double.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 				{
 					return new Capnproto.PrimitiveList.Double.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 				}
 				
-				public sealed override Capnproto.PrimitiveList.Double.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+				public override Capnproto.PrimitiveList.Double.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 				{
 					return new Capnproto.PrimitiveList.Double.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 				}

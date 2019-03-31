@@ -42,6 +42,6 @@ namespace Capnproto
 			return src.limit();
 		}
 		
-		private Stream file;
+		readonly Stream file;
 	}
 }

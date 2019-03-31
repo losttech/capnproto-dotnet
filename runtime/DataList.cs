@@ -24,7 +24,7 @@ namespace Capnproto
 	using System;
 	using System.Collections;
 	
-	public sealed class DataList
+	public static class DataList
 	{
 		public sealed class Factory : Capnproto.ListFactory<Capnproto.DataList.Builder, Capnproto.DataList.Reader>
 		{
@@ -33,12 +33,12 @@ namespace Capnproto
 				
 			}
 			
-			public sealed override Capnproto.DataList.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+			public override Capnproto.DataList.Reader ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 			{
 				return new Capnproto.DataList.Reader(segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 			}
 			
-			public sealed override Capnproto.DataList.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+			public override Capnproto.DataList.Builder constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 			{
 				return new Capnproto.DataList.Builder(segment, ptr, elementCount, step, structDataSize, structPointerCount);
 			}

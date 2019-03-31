@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	internal sealed class WireHelpers
+	internal static class WireHelpers
 	{
 		internal static int roundBytesUpToWords(int bytes)
 		{
@@ -39,7 +39,7 @@ namespace Capnproto
 			return (int)((bits + 63) / ((long)Capnproto.Constants.BITS_PER_WORD));
 		}
 		
-		internal class AllocateResult
+		internal struct AllocateResult
 		{
 			public readonly int ptr;
 			
@@ -89,7 +89,7 @@ namespace Capnproto
 			return new Capnproto.WireHelpers.AllocateResult(ptr, refOffset, segment);
 		}
 		
-		internal class FollowBuilderFarsResult
+		internal struct FollowBuilderFarsResult
 		{
 			public readonly int ptr;
 			
@@ -136,7 +136,7 @@ namespace Capnproto
 			return new Capnproto.WireHelpers.FollowBuilderFarsResult(refTarget, @ref, segment);
 		}
 		
-		internal class FollowFarsResult
+		internal struct FollowFarsResult
 		{
 			public readonly int ptr;
 			

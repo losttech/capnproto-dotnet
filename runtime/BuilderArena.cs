@@ -23,27 +23,12 @@ namespace Capnproto
 {
 	public sealed class BuilderArena : Capnproto.Arena
 	{
-		[System.Serializable]
-		public sealed class AllocationStrategy : Sharpen.EnumBase
-		{
-			public static readonly Capnproto.BuilderArena.AllocationStrategy FIXED_SIZE = new Capnproto.BuilderArena.AllocationStrategy(0, "FIXED_SIZE");
-			
-			public static readonly Capnproto.BuilderArena.AllocationStrategy GROW_HEURISTICALLY = new Capnproto.BuilderArena.AllocationStrategy(1, "GROW_HEURISTICALLY");
-			
-			private AllocationStrategy(int ordinal, string name) : base(ordinal, name)
-			{
-			}
-			
-			public static AllocationStrategy[] values()
-			{
-				return new AllocationStrategy[] { FIXED_SIZE, GROW_HEURISTICALLY };
-			}
-			
-			static AllocationStrategy()
-			{
-				RegisterValues<AllocationStrategy>(values());
-			}
-		}
+        [System.Serializable]
+        public enum AllocationStrategy
+        {
+            FIXED_SIZE,
+            GROW_HEURISTICALLY
+        }
 		
 		public const int SUGGESTED_FIRST_SEGMENT_WORDS = 1024;
 		
@@ -104,9 +89,9 @@ namespace Capnproto
 			// allocate_owned_memory
 			int size = System.Math.Max(amount, this.nextSize);
 			Capnproto.SegmentBuilder newSegment = new Capnproto.SegmentBuilder(java.nio.ByteBuffer.allocate(size * Capnproto.Constants.BYTES_PER_WORD), this);
-			switch(this.allocationStrategy.ordinal())
+			switch(this.allocationStrategy)
 			{
-				case 1:
+				case AllocationStrategy.GROW_HEURISTICALLY:
 				{
 					this.nextSize += size;
 					break;

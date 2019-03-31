@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	public sealed class ListList
+	public static class ListList
 	{
 		public sealed class Factory<ElementBuilder, ElementReader> : Capnproto.ListFactory<Capnproto.ListList.Builder<ElementBuilder, ElementReader>,
 		                                                             Capnproto.ListList.Reader<ElementReader>>
@@ -34,12 +34,12 @@ namespace Capnproto
 				this.SingleFactory = factory;
 			}
 			
-			public sealed override Capnproto.ListList.Reader<ElementReader> ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
+			public override Capnproto.ListList.Reader<ElementReader> ConstructReader(Capnproto.SegmentReader segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount, int nestingLimit)
 			{
 				return new Capnproto.ListList.Reader<ElementReader>(SingleFactory, segment, ptr, elementCount, step, structDataSize, structPointerCount, nestingLimit);
 			}
 			
-			public sealed override Capnproto.ListList.Builder<ElementBuilder, ElementReader> constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
+			public override Capnproto.ListList.Builder<ElementBuilder, ElementReader> constructBuilder(Capnproto.SegmentBuilder segment, int ptr, int elementCount, int step, int structDataSize, short structPointerCount)
 			{
 				return new Capnproto.ListList.Builder<ElementBuilder, ElementReader>(SingleFactory, segment, ptr, elementCount, step, structDataSize, structPointerCount);
 			}

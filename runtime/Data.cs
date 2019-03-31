@@ -21,9 +21,9 @@
 
 namespace Capnproto
 {
-	public sealed class Data
+	public static class Data
 	{
-		public sealed class Factory : Capnproto.FromPointerReaderBlobDefault<Capnproto.Data.Reader>,
+		public struct Factory : Capnproto.FromPointerReaderBlobDefault<Capnproto.Data.Reader>,
 		                              Capnproto.PointerFactory<Capnproto.Data.Builder, Capnproto.Data.Reader>,
 		                              Capnproto.FromPointerBuilderBlobDefault<Capnproto.Data.Builder>,
 		                              Capnproto.SetPointerBuilder<Capnproto.Data.Builder, Capnproto.Data.Reader>

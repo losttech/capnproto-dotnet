@@ -23,7 +23,7 @@ namespace Capnproto
 {
 	public sealed class ReaderArena : Capnproto.Arena
 	{
-		public long limit;
+		long limit;
 		
 		public readonly System.Collections.Generic.List<Capnproto.SegmentReader> segments;
 		

@@ -21,7 +21,7 @@
 
 namespace Capnproto
 {
-	public sealed class ElementSize
+	public static class ElementSize
 	{
 		public const byte VOID = 0;
 		
